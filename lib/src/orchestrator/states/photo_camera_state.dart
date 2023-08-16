@@ -90,6 +90,11 @@ class PhotoCameraState extends CameraState {
     return captureRequest;
   }
 
+  Future<void> reset() async {
+    cameraContext.mediaCaptureController.add(null);
+    return;
+  }
+
   /// PRIVATES
 
   set _mediaCapture(MediaCapture media) {
